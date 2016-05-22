@@ -1,3 +1,5 @@
-# Exemplos-Java
-Alguns Exemplos de Java 
-Projetos Java compátiveis com Eclipse(Mars), se tiverem problema de compatibilidade ou desejarem executar em outro eclipse basta excluir o arquivo .project 
+﻿# Music Rename
+
+Um pequeno app pra administrar arquivos de música.
+
+Vladwoguer Bezerra 2016
