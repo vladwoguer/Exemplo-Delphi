@@ -1,0 +1,189 @@
+object frmCalculadora: TfrmCalculadora
+  Left = 0
+  Top = 0
+  Caption = 'Calculadora'
+  ClientHeight = 234
+  ClientWidth = 228
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  PixelsPerInch = 96
+  TextHeight = 13
+  object edResultado: TEdit
+    Left = 8
+    Top = 8
+    Width = 208
+    Height = 21
+    TabStop = False
+    Alignment = taRightJustify
+    Enabled = False
+    TabOrder = 0
+    Text = '0'
+  end
+  object bt7: TButton
+    Left = 8
+    Top = 49
+    Width = 51
+    Height = 40
+    Caption = '7'
+    TabOrder = 1
+    TabStop = False
+    OnClick = NumeroClick
+  end
+  object bt8: TButton
+    Left = 64
+    Top = 49
+    Width = 50
+    Height = 40
+    Caption = '8'
+    TabOrder = 2
+    TabStop = False
+    OnClick = NumeroClick
+  end
+  object bt9: TButton
+    Left = 120
+    Top = 49
+    Width = 50
+    Height = 40
+    Caption = '9'
+    TabOrder = 3
+    TabStop = False
+    OnClick = NumeroClick
+  end
+  object btSoma: TButton
+    Left = 176
+    Top = 49
+    Width = 40
+    Height = 40
+    Caption = '+'
+    TabOrder = 4
+    TabStop = False
+    OnClick = clickOperador
+  end
+  object bt4: TButton
+    Left = 8
+    Top = 95
+    Width = 50
+    Height = 40
+    Caption = '4'
+    TabOrder = 5
+    TabStop = False
+    OnClick = NumeroClick
+  end
+  object bt5: TButton
+    Left = 64
+    Top = 95
+    Width = 50
+    Height = 40
+    Caption = '5'
+    TabOrder = 6
+    TabStop = False
+    OnClick = NumeroClick
+  end
+  object bt6: TButton
+    Left = 120
+    Top = 95
+    Width = 50
+    Height = 40
+    Caption = '6'
+    TabOrder = 7
+    TabStop = False
+    OnClick = NumeroClick
+  end
+  object btSubtrair: TButton
+    Left = 176
+    Top = 95
+    Width = 40
+    Height = 40
+    Caption = '-'
+    TabOrder = 8
+    TabStop = False
+    OnClick = clickOperador
+  end
+  object bt1: TButton
+    Left = 8
+    Top = 142
+    Width = 50
+    Height = 40
+    Caption = '1'
+    TabOrder = 9
+    TabStop = False
+    OnClick = NumeroClick
+  end
+  object bt2: TButton
+    Left = 64
+    Top = 141
+    Width = 50
+    Height = 40
+    Caption = '2'
+    TabOrder = 10
+    TabStop = False
+    OnClick = NumeroClick
+  end
+  object bt3: TButton
+    Left = 120
+    Top = 141
+    Width = 50
+    Height = 40
+    Caption = '3'
+    TabOrder = 11
+    TabStop = False
+    OnClick = NumeroClick
+  end
+  object btMultiplicar: TButton
+    Left = 176
+    Top = 141
+    Width = 40
+    Height = 40
+    Caption = 'x'
+    TabOrder = 12
+    TabStop = False
+    OnClick = clickOperador
+  end
+  object btLimpar: TButton
+    Left = 8
+    Top = 187
+    Width = 50
+    Height = 40
+    Caption = 'C'
+    TabOrder = 13
+    TabStop = False
+    OnClick = btLimparClick
+  end
+  object bt0: TButton
+    Left = 64
+    Top = 186
+    Width = 50
+    Height = 40
+    Caption = '0'
+    TabOrder = 14
+    TabStop = False
+    OnClick = NumeroClick
+  end
+  object btIgual: TButton
+    Left = 120
+    Top = 186
+    Width = 50
+    Height = 40
+    Caption = '='
+    TabOrder = 15
+    TabStop = False
+    OnClick = btIgualClick
+  end
+  object btDividir: TButton
+    Left = 176
+    Top = 186
+    Width = 40
+    Height = 40
+    Caption = '/'
+    TabOrder = 16
+    TabStop = False
+    OnClick = clickOperador
+  end
+end

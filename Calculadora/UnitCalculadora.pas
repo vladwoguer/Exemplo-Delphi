@@ -32,6 +32,7 @@ type
     procedure btIgualClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure btLimparClick(Sender: TObject);
+
   private
     { Private declarations }
       FOperacao : char;
@@ -40,10 +41,13 @@ type
       FOperando2: Double;
       FUltimoFoiIgual: boolean;
       FUltimoFoiSinal : boolean;
+      FLimpou : boolean;
       function Calcular(Operando1 : Double; Operando2 : Double; Operacao : char ): Double;
       procedure Limpar;
       procedure BloquearSinais;
       procedure DesbloquearSinais;
+      procedure clicouNumero(numero : String);
+      procedure clicouOperador(operador : String);
 
 
   public
@@ -58,41 +62,69 @@ implementation
 {$R *.dfm}
 procedure TfrmCalculadora.clickOperador(Sender: TObject);
 begin
-    FOperacao := TButton(Sender).Caption[1];
-    FOperando1 := StrToFloat(edResultado.Text);
+       clicouOperador(TButton(Sender).Caption);
+end;
+
+procedure TfrmCalculadora.clicouOperador(operador : String);
+var
+    temp : string;
+begin
+    if not FUltimoFoiSinal then
+        begin
+            FOperando2 := StrToFloat(edResultado.Text);
+            edResultado.Text := FloatToStr(Calcular(FOperando1, FOperando2, FOperacao ));
+            FOperando1 := StrToFloat(edResultado.Text);
+        end ;
+
+    FOperacao :=  operador[1];
     FUltimoFoiSinal := true;
-    BloquearSinais;
 end;
 
 procedure TfrmCalculadora.FormCreate(Sender: TObject);
 begin
-    FOperando1 := 0;
-    FOperando2 := 0;
+    Limpar;
 end;
 
 procedure TfrmCalculadora.NumeroClick(Sender: TObject);
 begin
-    if FUltimoFoiIgual or FUltimoFoiSinal then
+          clicouNumero(TButton(Sender).Caption);
+end;
+
+procedure TfrmCalculadora.clicouNumero(numero : String);
+begin
+  if FUltimoFoiIgual or FUltimoFoiSinal then
       begin
-        edResultado.Text := TButton(Sender).Caption;
-        FUltimoFoiIgual := false;
-        FUltimoFoiSinal := false;
+        edResultado.Text := numero;
+        if FUltimoFoiIgual then
+        begin
+          FUltimoFoiIgual := false;
+        end;
+        if FUltimoFoiSinal then
+        begin
+            FUltimoFoiSinal := false;
+        end;
       end
     else
-    begin
-        if edResultado.Text = '0' then
-            edResultado.Text := TButton(Sender).Caption
-        else
-            edResultado.Text := edResultado.Text + TButton(Sender).Caption;
-    end;
+        begin
+            if edResultado.Text = '0' then
+                edResultado.Text := numero
+            else
+                edResultado.Text := edResultado.Text + numero;
+        end;
 end;
+
+
 
 procedure TfrmCalculadora.btIgualClick(Sender: TObject);
 begin
-    DesbloquearSinais;
-    FOperando2 := StrToFloat(edResultado.Text);
+    if not FUltimoFoiIgual then
+    begin
+        FOperando2 := StrToFloat(edResultado.Text);
+        edResultado.Text := FloatToStr(Calcular(FOperando1, FOperando2, FOperacao ));
+    end;
     FUltimoFoiIgual := true;
-    edResultado.Text := FloatToStr(Calcular(FOperando1, FOperando2, FOperacao ));
+    FUltimoFoiSinal := true;
+    FOperando1 := StrToFloat(edResultado.Text);
 end;
 
 procedure TfrmCalculadora.btLimparClick(Sender: TObject);
@@ -103,10 +135,21 @@ end;
 function TfrmCalculadora.Calcular(Operando1 : Double; Operando2 : Double; Operacao : char ): Double;
 begin
     case Operacao of
-      '+': Calcular := Operando1 + Operando2;
-      '-': Calcular := Operando1 - Operando2;
-      'x': Calcular := Operando1 * Operando2;
-      '/': Calcular := Operando1 / Operando2;
+      '+':begin
+              Calcular := Operando1 + Operando2;
+          end;
+      '-':begin
+              Calcular := Operando1 - Operando2;
+          end;
+      'x':begin
+              Calcular := Operando1 * Operando2;
+          end;
+      'X':begin
+              Calcular := Operando1 * Operando2;
+          end;
+      '/':begin
+              Calcular := Operando1 / Operando2;
+          end;
     end;
 end;
 procedure TfrmCalculadora.Limpar;
@@ -115,7 +158,9 @@ begin
     FOperando2 := 0;
     FOperacao := '+';
     edResultado.Text := '0';
-
+    FUltimoFoiSinal := false;
+    FUltimoFoiIgual := false;
+    FLimpou := true;
 end;
 
  procedure TfrmCalculadora.BloquearSinais;

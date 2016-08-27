@@ -2,8 +2,8 @@ object frmCalculadora: TfrmCalculadora
   Left = 0
   Top = 0
   Caption = 'Calculadora'
-  ClientHeight = 248
-  ClientWidth = 233
+  ClientHeight = 234
+  ClientWidth = 228
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -19,17 +19,20 @@ object frmCalculadora: TfrmCalculadora
     Top = 8
     Width = 208
     Height = 21
+    TabStop = False
     Alignment = taRightJustify
+    Enabled = False
     TabOrder = 0
     Text = '0'
   end
   object bt7: TButton
     Left = 8
-    Top = 50
-    Width = 54
+    Top = 49
+    Width = 51
     Height = 40
     Caption = '7'
     TabOrder = 1
+    TabStop = False
     OnClick = NumeroClick
   end
   object bt8: TButton
@@ -39,6 +42,7 @@ object frmCalculadora: TfrmCalculadora
     Height = 40
     Caption = '8'
     TabOrder = 2
+    TabStop = False
     OnClick = NumeroClick
   end
   object bt9: TButton
@@ -48,6 +52,7 @@ object frmCalculadora: TfrmCalculadora
     Height = 40
     Caption = '9'
     TabOrder = 3
+    TabStop = False
     OnClick = NumeroClick
   end
   object btSoma: TButton
@@ -57,6 +62,7 @@ object frmCalculadora: TfrmCalculadora
     Height = 40
     Caption = '+'
     TabOrder = 4
+    TabStop = False
     OnClick = clickOperador
   end
   object bt4: TButton
@@ -66,6 +72,7 @@ object frmCalculadora: TfrmCalculadora
     Height = 40
     Caption = '4'
     TabOrder = 5
+    TabStop = False
     OnClick = NumeroClick
   end
   object bt5: TButton
@@ -75,6 +82,7 @@ object frmCalculadora: TfrmCalculadora
     Height = 40
     Caption = '5'
     TabOrder = 6
+    TabStop = False
     OnClick = NumeroClick
   end
   object bt6: TButton
@@ -84,6 +92,7 @@ object frmCalculadora: TfrmCalculadora
     Height = 40
     Caption = '6'
     TabOrder = 7
+    TabStop = False
     OnClick = NumeroClick
   end
   object btSubtrair: TButton
@@ -93,6 +102,7 @@ object frmCalculadora: TfrmCalculadora
     Height = 40
     Caption = '-'
     TabOrder = 8
+    TabStop = False
     OnClick = clickOperador
   end
   object bt1: TButton
@@ -102,6 +112,7 @@ object frmCalculadora: TfrmCalculadora
     Height = 40
     Caption = '1'
     TabOrder = 9
+    TabStop = False
     OnClick = NumeroClick
   end
   object bt2: TButton
@@ -111,6 +122,7 @@ object frmCalculadora: TfrmCalculadora
     Height = 40
     Caption = '2'
     TabOrder = 10
+    TabStop = False
     OnClick = NumeroClick
   end
   object bt3: TButton
@@ -120,6 +132,7 @@ object frmCalculadora: TfrmCalculadora
     Height = 40
     Caption = '3'
     TabOrder = 11
+    TabStop = False
     OnClick = NumeroClick
   end
   object btMultiplicar: TButton
@@ -129,6 +142,7 @@ object frmCalculadora: TfrmCalculadora
     Height = 40
     Caption = 'x'
     TabOrder = 12
+    TabStop = False
     OnClick = clickOperador
   end
   object btLimpar: TButton
@@ -138,6 +152,7 @@ object frmCalculadora: TfrmCalculadora
     Height = 40
     Caption = 'C'
     TabOrder = 13
+    TabStop = False
     OnClick = btLimparClick
   end
   object bt0: TButton
@@ -147,6 +162,7 @@ object frmCalculadora: TfrmCalculadora
     Height = 40
     Caption = '0'
     TabOrder = 14
+    TabStop = False
     OnClick = NumeroClick
   end
   object btIgual: TButton
@@ -156,6 +172,7 @@ object frmCalculadora: TfrmCalculadora
     Height = 40
     Caption = '='
     TabOrder = 15
+    TabStop = False
     OnClick = btIgualClick
   end
   object btDividir: TButton
@@ -165,6 +182,7 @@ object frmCalculadora: TfrmCalculadora
     Height = 40
     Caption = '/'
     TabOrder = 16
+    TabStop = False
     OnClick = clickOperador
   end
 end
