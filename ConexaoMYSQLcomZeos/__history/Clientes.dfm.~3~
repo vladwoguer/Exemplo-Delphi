@@ -1,0 +1,42 @@
+object FormClientes: TFormClientes
+  Left = 0
+  Top = 0
+  Caption = 'FormClientes'
+  ClientHeight = 201
+  ClientWidth = 447
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  Menu = MainMenuClientes
+  OldCreateOrder = False
+  PopupMenu = PopupMenuClientes
+  Position = poDesktopCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object ActionListClientes: TActionList
+    Left = 352
+    Top = 96
+    object ActionSair: TAction
+      Caption = 'Sair'
+      ShortCut = 27
+      OnExecute = ActionSairExecute
+    end
+  end
+  object MainMenuClientes: TMainMenu
+    Left = 192
+    Top = 88
+    object Sair: TMenuItem
+      Action = ActionSair
+    end
+  end
+  object PopupMenuClientes: TPopupMenu
+    Left = 280
+    Top = 40
+    object Sair1: TMenuItem
+      Action = ActionSair
+    end
+  end
+end

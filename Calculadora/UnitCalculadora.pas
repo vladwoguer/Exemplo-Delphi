@@ -32,6 +32,7 @@ type
     procedure btIgualClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure btLimparClick(Sender: TObject);
+    procedure FormKeyUp(Sender: TObject; var Key: Word; Shift: TShiftState);
 
   private
     { Private declarations }
@@ -83,6 +84,23 @@ end;
 procedure TfrmCalculadora.FormCreate(Sender: TObject);
 begin
     Limpar;
+end;
+
+procedure TfrmCalculadora.FormKeyUp(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+      if(Key >=48) and ( Key<=57) then
+          clicouNumero(char(Key));
+
+      if Key = ord('*') then
+          clicouOperador('x');
+      if Key = ord('+') then
+          clicouOperador('+');
+      if Key = ord('-') then
+          clicouOperador('-');
+      if Key = ord('/') then
+          clicouOperador('/');
+
 end;
 
 procedure TfrmCalculadora.NumeroClick(Sender: TObject);

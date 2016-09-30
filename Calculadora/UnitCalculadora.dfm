@@ -12,6 +12,7 @@ object frmCalculadora: TfrmCalculadora
   Font.Style = []
   OldCreateOrder = False
   OnCreate = FormCreate
+  OnKeyUp = FormKeyUp
   PixelsPerInch = 96
   TextHeight = 13
   object edResultado: TEdit

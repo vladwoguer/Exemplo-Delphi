@@ -1,0 +1,16 @@
+program ZeosProject;
+
+uses
+  Vcl.Forms,
+  Zeos in 'Zeos.pas' {FormPrincipal},
+  DataModule in 'DataModule.pas' {DModule: TDataModule};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFormPrincipal, FormPrincipal);
+  Application.CreateForm(TDModule, DModule);
+  Application.Run;
+end.

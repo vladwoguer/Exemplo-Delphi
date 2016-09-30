@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2016/08/24 22:19:19.000.827,=C:\Users\Vladwoguer\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2016/08/30 03:11:51.760,=C:\Users\Vladwoguer\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2016/08/30 03:16:15.743,=C:\Users\Vladwoguer\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2016/08/30 03:33:13.902,C:\Users\Vladwoguer\Desktop\MusicRename\TryExcept\Imagem.dfm=C:\Users\Vladwoguer\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2016/08/30 03:33:13.902,C:\Users\Vladwoguer\Desktop\MusicRename\TryExcept\Imagem.pas=C:\Users\Vladwoguer\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2016/08/30 03:35:46.503,C:\Users\Vladwoguer\Desktop\MusicRename\TryExcept\data.pas=C:\Users\Vladwoguer\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2016/08/30 03:35:46.503,C:\Users\Vladwoguer\Desktop\MusicRename\TryExcept\data.dfm=C:\Users\Vladwoguer\Documents\Embarcadero\Studio\Projects\Unit2.dfm</Transaction>
+    <Transaction>2016/08/30 03:36:05.867,C:\Users\Vladwoguer\Desktop\MusicRename\TryExcept\ImagemTry.dproj=C:\Users\Vladwoguer\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

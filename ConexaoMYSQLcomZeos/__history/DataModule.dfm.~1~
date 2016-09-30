@@ -1,0 +1,17 @@
+object DModule: TDModule
+  OldCreateOrder = False
+  Height = 150
+  Width = 215
+  object ZConnection: TZConnection
+    ControlsCodePage = cCP_UTF16
+    Catalog = ''
+    HostName = 'localhost'
+    Port = 3306
+    Database = 'ds2704'
+    User = 'root'
+    Password = 'root'
+    Protocol = 'mysql-5'
+    Left = 120
+    Top = 72
+  end
+end
