@@ -4,7 +4,8 @@ uses
   Vcl.Forms,
   Zeos in 'Zeos.pas' {FormPrincipal},
   DataModule in 'DataModule.pas' {DModule: TDataModule},
-  Clientes in 'Clientes.pas' {FormClientes};
+  Clientes in 'Clientes.pas' {FormClientes},
+  Cliente in 'Cliente.pas' {FormCliente};
 
 {$R *.res}
 
